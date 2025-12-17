@@ -1,4 +1,4 @@
-.design3-container {
+.landingpage-container {
   min-height: 100vh;
   background: #0d1117;
   color: #c9d1d9;
@@ -7,7 +7,7 @@
   overflow: hidden;
 }
 
-.design3-background {
+.landingpage-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -16,7 +16,7 @@
   opacity: 0.3;
 }
 
-.design3-grid-bg {
+.landingpage-grid-bg {
   width: 100%;
   height: 100%;
   background-image: 
@@ -35,36 +35,36 @@
   }
 }
 
-.design3-header {
+.landingpage-header {
   position: relative;
   padding: 2rem 4rem;
   border-bottom: 1px solid #21262d;
 }
 
-.design3-terminal {
+.landingpage-terminal {
   font-size: 1.2rem;
   color: #58a6ff;
   font-family: 'Monaco', monospace;
 }
 
-.design3-prompt {
+.landingpage-prompt {
   color: #7ee787;
   margin-right: 0.5rem;
 }
 
-.design3-content {
+.landingpage-content {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 2rem;
 }
 
-.design3-intro {
+.landingpage-intro {
   text-align: center;
   margin-bottom: 4rem;
 }
 
-.design3-title {
+.landingpage-title {
   font-size: 4rem;
   font-weight: 700;
   margin: 0;
@@ -72,28 +72,28 @@
   font-family: 'Monaco', monospace;
 }
 
-.design3-bracket {
+.landingpage-bracket {
   color: #7ee787;
 }
 
-.design3-subtitle {
+.landingpage-subtitle {
   font-size: 1.5rem;
   margin-top: 1rem;
   color: #8b949e;
 }
 
-.design3-comment {
+.landingpage-comment {
   color: #6e7681;
 }
 
-.design3-cards {
+.landingpage-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
 
-.design3-card {
+.landingpage-card {
   background: #161b22;
   border: 1px solid #30363d;
   border-radius: 8px;
@@ -101,13 +101,13 @@
   transition: all 0.3s ease;
 }
 
-.design3-card:hover {
+.landingpage-card:hover {
   border-color: #58a6ff;
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(88, 166, 255, 0.1);
 }
 
-.design3-card-header {
+.landingpage-card-header {
   background: #0d1117;
   padding: 1rem;
   border-bottom: 1px solid #21262d;
@@ -115,16 +115,16 @@
   color: #8b949e;
 }
 
-.design3-card-bullet {
+.landingpage-card-bullet {
   color: #7ee787;
   margin-right: 0.5rem;
 }
 
-.design3-card-body {
+.landingpage-card-body {
   padding: 1.5rem;
 }
 
-.design3-card-body code {
+.landingpage-card-body code {
   display: block;
   background: #0d1117;
   padding: 1rem;
@@ -135,7 +135,7 @@
   border: 1px solid #21262d;
 }
 
-.design3-card-link {
+.landingpage-card-link {
   color: #58a6ff;
   text-decoration: none;
   font-weight: 600;
@@ -145,12 +145,12 @@
   transition: color 0.3s;
 }
 
-.design3-card-link:hover {
+.landingpage-card-link:hover {
   color: #79c0ff;
   text-decoration: underline;
 }
 
-.design3-footer {
+.landingpage-footer {
   position: relative;
   text-align: center;
   padding: 3rem 2rem;
@@ -159,15 +159,15 @@
 }
 
 @media (max-width: 768px) {
-  .design3-header {
+  .landingpage-header {
     padding: 1.5rem 2rem;
   }
   
-  .design3-title {
+  .landingpage-title {
     font-size: 2.5rem;
   }
   
-  .design3-cards {
+  .landingpage-cards {
     grid-template-columns: 1fr;
   }
 }
