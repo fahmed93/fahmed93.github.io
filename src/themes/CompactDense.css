@@ -1,0 +1,89 @@
+.compact-dense {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: 'Arial', sans-serif;
+  background: white;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.cd-header {
+  text-align: center;
+  border-bottom: 2px solid #000;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.cd-header h1 {
+  font-size: 2rem;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.cd-contact-inline {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.cd-two-col {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 25px;
+}
+
+.cd-section {
+  margin-bottom: 18px;
+}
+
+.cd-section h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+}
+
+.cd-text-sm {
+  font-size: 0.85rem;
+  color: #444;
+  margin: 0;
+}
+
+.cd-skill-compact {
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+
+.cd-skill-compact strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.cd-item-compact {
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+}
+
+.cd-item-compact strong {
+  font-size: 0.95rem;
+  color: #000;
+}
+
+.cd-meta {
+  font-size: 0.8rem;
+  color: #666;
+  font-style: italic;
+}
+
+.cd-list-compact {
+  margin: 6px 0 0 0;
+  padding-left: 18px;
+  font-size: 0.82rem;
+}
+
+.cd-list-compact li {
+  margin-bottom: 4px;
+  color: #444;
+}
