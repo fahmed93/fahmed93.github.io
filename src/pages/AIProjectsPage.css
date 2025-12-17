@@ -1,0 +1,525 @@
+/* AI Projects Page Styling */
+.ai-projects-container {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #e0e0e0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.ai-projects-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ai-projects-grid-bg {
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 255, 170, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 170, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+.ai-projects-header {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  border-bottom: 1px solid rgba(0, 255, 170, 0.2);
+}
+
+.ai-projects-back-link {
+  display: inline-block;
+  color: #00ffaa;
+  text-decoration: none;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.ai-projects-back-link:hover {
+  color: #00cc88;
+  transform: translateX(-5px);
+}
+
+.ai-projects-title-section {
+  text-align: center;
+}
+
+.ai-projects-title {
+  font-size: 3rem;
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+}
+
+.ai-projects-bracket {
+  color: #00ffaa;
+  margin: 0 0.5rem;
+}
+
+.ai-projects-subtitle {
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 0.5rem;
+  font-family: 'Courier New', monospace;
+}
+
+.ai-projects-comment {
+  color: #666;
+}
+
+.ai-projects-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ai-projects-intro {
+  margin-bottom: 3rem;
+}
+
+.ai-projects-highlight-box {
+  background: linear-gradient(135deg, rgba(0, 255, 170, 0.1) 0%, rgba(0, 170, 255, 0.1) 100%);
+  border: 1px solid rgba(0, 255, 170, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.ai-projects-highlight-box h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  color: #00ffaa;
+  font-family: 'Courier New', monospace;
+}
+
+.ai-projects-highlight-box p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 1rem auto;
+}
+
+.ai-projects-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00ffaa;
+  font-family: 'Courier New', monospace;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+.ai-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.ai-project-card {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(0, 255, 170, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.ai-project-card:hover {
+  border-color: #00ffaa;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 255, 170, 0.2);
+}
+
+.ai-project-card-header {
+  margin-bottom: 1rem;
+}
+
+.project-category-badge {
+  display: inline-block;
+  background: rgba(0, 255, 170, 0.2);
+  color: #00ffaa;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  border: 1px solid rgba(0, 255, 170, 0.3);
+}
+
+.ai-project-title {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+}
+
+.project-bullet {
+  color: #00ffaa;
+  margin-right: 0.5rem;
+}
+
+.ai-project-subtitle {
+  color: #888;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.ai-project-card-body {
+  margin: 1rem 0;
+}
+
+.ai-project-description {
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.ai-project-impact {
+  background: rgba(0, 255, 170, 0.05);
+  border-left: 3px solid #00ffaa;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.ai-project-impact h4 {
+  margin: 0 0 0.5rem 0;
+  color: #00ffaa;
+  font-size: 0.9rem;
+  font-family: 'Courier New', monospace;
+}
+
+.ai-project-impact ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+.ai-project-impact li {
+  margin: 0.3rem 0;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.ai-project-impact li::before {
+  content: "▸ ";
+  color: #00ffaa;
+  font-weight: bold;
+}
+
+.ai-project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tech-badge {
+  background: rgba(0, 170, 255, 0.2);
+  color: #00aaff;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-family: 'Courier New', monospace;
+  border: 1px solid rgba(0, 170, 255, 0.3);
+}
+
+.ai-project-card-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.view-details-link {
+  color: #00ffaa;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Modal Styles */
+.ai-projects-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.ai-projects-modal {
+  background: #1a1a1a;
+  border: 1px solid rgba(0, 255, 170, 0.3);
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.ai-projects-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  background: #1a1a1a;
+  z-index: 10;
+}
+
+.ai-projects-modal-header h2 {
+  margin: 0;
+  color: #00ffaa;
+  font-family: 'Courier New', monospace;
+  font-size: 1.8rem;
+}
+
+.modal-subtitle {
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.ai-projects-modal-close {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-projects-modal-close:hover {
+  color: #00ffaa;
+}
+
+.ai-projects-modal-body {
+  padding: 2rem;
+}
+
+.modal-section {
+  margin-bottom: 2rem;
+}
+
+.modal-section h3 {
+  color: #00ffaa;
+  font-family: 'Courier New', monospace;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 255, 170, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.features-list,
+.workflow-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li,
+.workflow-list li {
+  padding: 0.5rem 0;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.features-list li::before {
+  content: "✓ ";
+  color: #00ffaa;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.workflow-list {
+  counter-reset: step-counter;
+  padding-left: 0;
+}
+
+.workflow-list li {
+  counter-increment: step-counter;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.workflow-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  background: #00ffaa;
+  color: #0a0a0a;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.architecture-box {
+  background: rgba(0, 255, 170, 0.05);
+  border: 1px solid rgba(0, 255, 170, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.architecture-tier {
+  margin-bottom: 1.5rem;
+}
+
+.architecture-tier:last-child {
+  margin-bottom: 0;
+}
+
+.architecture-tier strong {
+  color: #00ffaa;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: 'Courier New', monospace;
+}
+
+.architecture-tier p {
+  margin: 0;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.architecture-tier ul {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+.architecture-tier li {
+  margin: 0.5rem 0;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.architecture-tier li::before {
+  content: "→ ";
+  color: #00aaff;
+  font-weight: bold;
+}
+
+.impact-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.metric-item {
+  background: rgba(0, 255, 170, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 170, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric-label {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.metric-value {
+  color: #00ffaa;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+}
+
+.technologies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tech-badge-large {
+  background: rgba(0, 170, 255, 0.2);
+  color: #00aaff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: 'Courier New', monospace;
+  border: 1px solid rgba(0, 170, 255, 0.3);
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ai-projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ai-projects-title {
+    font-size: 2rem;
+  }
+  
+  .ai-projects-stats {
+    gap: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .ai-projects-modal {
+    max-height: 95vh;
+  }
+  
+  .impact-metrics {
+    grid-template-columns: 1fr;
+  }
+}

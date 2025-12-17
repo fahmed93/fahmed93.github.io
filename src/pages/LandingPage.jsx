@@ -38,6 +38,16 @@ const LandingPage = () => {
             </div>
           </div>
 
+          <div className="landingpage-card landingpage-card-highlight">
+            <div className="landingpage-card-header">
+              <span className="landingpage-card-bullet">●</span> ai_agents.ts
+            </div>
+            <div className="landingpage-card-body">
+              <code>class AgenticAI {'{'} orchestrate() {'}'}</code>
+              <Link to="/ai-projects" className="landingpage-card-link">Explore AI →</Link>
+            </div>
+          </div>
+
           <div className="landingpage-card">
             <div className="landingpage-card-header">
               <span className="landingpage-card-bullet">●</span> projects.json
@@ -45,16 +55,6 @@ const LandingPage = () => {
             <div className="landingpage-card-body">
               <code>import projects from './portfolio'</code>
               <Link to="/portfolio" className="landingpage-card-link">View Code →</Link>
-            </div>
-          </div>
-
-          <div className="landingpage-card">
-            <div className="landingpage-card-header">
-              <span className="landingpage-card-bullet">●</span> blog.md
-            </div>
-            <div className="landingpage-card-body">
-              <code># Latest thoughts & tutorials</code>
-              <a href="#blog" className="landingpage-card-link">Read More →</a>
             </div>
           </div>
 
