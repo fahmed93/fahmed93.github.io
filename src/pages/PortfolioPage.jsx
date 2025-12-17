@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchPublicRepos, fetchRepoReadme, extractReadmeSummary } from '../utils/githubApi';
+import { mockRepos } from '../utils/mockData';
 import './PortfolioPage.css';
 
 const PortfolioPage = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [selectedRepo, setSelectedRepo] = useState(null);
   const [readmeContent, setReadmeContent] = useState('');
   const [loadingReadme, setLoadingReadme] = useState(false);
+  const [usingMockData, setUsingMockData] = useState(false);
 
   const username = 'fahmed93'; // GitHub username
 
@@ -34,8 +35,10 @@ const PortfolioPage = () => {
         
         setRepos(reposWithSummaries);
       } catch (error) {
-        setError('Failed to load repositories. Please try again later.');
-        console.error('Error loading repositories:', error);
+        // Fallback to mock data if API fails (e.g., in local dev with blocked requests)
+        console.warn('GitHub API failed, using mock data:', error);
+        setUsingMockData(true);
+        setRepos(mockRepos);
       } finally {
         setLoading(false);
       }
@@ -77,27 +80,6 @@ const PortfolioPage = () => {
     );
   }
 
-  if (error) {
-    return (
-      <div className="portfolio-container">
-        <div className="portfolio-background">
-          <div className="portfolio-grid-bg"></div>
-        </div>
-        <header className="portfolio-header">
-          <Link to="/" className="portfolio-back-link">← Back to Home</Link>
-          <h1 className="portfolio-title">
-            <span className="portfolio-bracket">{'<'}</span>
-            Portfolio
-            <span className="portfolio-bracket">{'/>'}</span>
-          </h1>
-        </header>
-        <div className="error-container">
-          <p>{error}</p>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="portfolio-container">
       <div className="portfolio-background">
@@ -115,6 +97,7 @@ const PortfolioPage = () => {
           <p className="portfolio-subtitle">
             <span className="portfolio-comment">// </span>
             Public GitHub Repositories ({repos.length})
+            {usingMockData && <span className="portfolio-mock-badge"> [Demo Data]</span>}
           </p>
         </div>
       </header>
