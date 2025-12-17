@@ -1,36 +1,29 @@
-# Fahad Ahmed - Personal Homepage
+# Personal Portfolio Website
 
-A modern, interactive React homepage with 5 different design themes. This project serves as a personal portfolio site for GitHub with easy-to-switch design options.
+A personal portfolio code website built with React 19 and Vite. Features a landing page and a resume page with 6 switchable visual themes.
 
-## 🎨 Features
+**Live Site:** [fahmed93.github.io](https://fahmed93.github.io)
 
-- **5 Unique Designs**: Switch between different visual styles instantly
-- **Modern Tech Stack**: Built with React 19 and Vite for fast performance
-- **Responsive Design**: All designs are mobile-friendly and adaptive
-- **Easy Theme Switching**: Toggle between designs with a simple dropdown menu
-- **Navigation Links**: Includes spots for Resume, Projects, Blog, and Contact pages
+## About
 
-## 🚀 Available Designs
+This is a modern personal portfolio website showcasing:
+- Interactive landing page with multiple design themes
+- Resume page with 6 professional themes that render from a single markdown source
+- Responsive design optimized for all devices
+- Fast performance with React 19 and Vite
 
-1. **Modern Gradient** - Vibrant purple gradient with glassmorphic cards
-2. **Minimalist Professional** - Clean, typography-focused design with subtle animations
-3. **Dark Theme Tech** - GitHub-inspired dark theme with code-like aesthetics
-4. **Colorful Creative** - Bright, animated cards with playful colors
-5. **Glassmorphism** - Frosted glass effect with smooth morphing backgrounds
-
-## 📦 Getting Started
+## Getting Started
 
 ### Prerequisites
-
 - Node.js (v18 or higher)
-- npm or yarn
+- npm
 
 ### Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/fahmed93/fahmed93.git
-cd fahmed93
+git clone https://github.com/fahmed93/fahmed93.github.io.git
+cd fahmed93.github.io
 ```
 
 2. Install dependencies:
@@ -38,15 +31,18 @@ cd fahmed93
 npm install
 ```
 
-3. Start the development server:
+### Development
+
+Start the development server:
 ```bash
 npm run dev
 ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+Open [http://localhost:5173](http://localhost:5173) to view in the browser.
 
-## 🛠️ Available Scripts
+### Building
 
+<<<<<<< HEAD
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
@@ -136,31 +132,67 @@ This site is configured to deploy to `https://fahmed93.github.io/` (root domain)
 - When GitHub Pages encounters a 404, it serves the `404.html` file, which loads the React app and allows React Router to handle the routing
 
 **Local Build:**
+=======
+Build for production:
+>>>>>>> c393ef097099407aa8d8ec0009213cc59681047d
 ```bash
 npm run build
 ```
 
-The built files will be in the `dist` folder.
+The built files will be in the `dist/` folder.
 
-### Deploy to Vercel/Netlify
+Preview the production build:
+```bash
+npm run preview
+```
 
-Simply connect your GitHub repository to Vercel or Netlify and they will automatically detect the Vite configuration.
+### Linting
 
-## 🔧 Technologies Used
+Run ESLint to check code quality:
+```bash
+npm run lint
+```
+
+## Deployment
+
+This site is automatically deployed to GitHub Pages via GitHub Actions whenever changes are pushed to the `main` branch.
+
+**Manual Deployment:**
+1. Build the project: `npm run build`
+2. The GitHub Actions workflow (`.github/workflows/deploy.yml`) handles deployment
+3. Site is published to [https://fahmed93.github.io](https://fahmed93.github.io)
+
+**Alternative Platforms:**
+- **Vercel/Netlify**: Connect your GitHub repository and they will auto-detect the Vite configuration
+
+## Project Structure
+
+```
+fahmed93.github.io/
+├── src/
+│   ├── pages/           # Landing and Resume pages
+│   ├── themes/          # 6 resume theme components
+│   ├── components/      # Reusable components
+│   ├── utils/           # Utilities (resume parser)
+│   └── App.jsx          # Main app with routing
+├── public/
+│   └── resume.md        # Resume content in markdown
+├── docs/                # Additional documentation
+└── package.json
+```
+
+## Technologies
 
 - **React 19** - Latest React with modern features
-- **Vite** - Next-generation frontend tooling
-- **CSS3** - Modern CSS with animations and glassmorphism effects
-- **ESLint** - Code quality and consistency
+- **Vite** - Fast build tool and dev server
+- **React Router** - Client-side routing
+- **CSS3** - Modern styling with animations and effects
 
-## 📝 License
+## Documentation
+
+- [Project Summary](docs/PROJECT_SUMMARY.md) - Detailed overview of features and architecture
+- [Quick Start Guide](docs/QUICK_START.md) - Step-by-step setup and customization guide
+
+## License
 
 This project is open source and available for personal use.
-
-## 🤝 Contributing
-
-Feel free to fork this project and customize it for your own use!
-
-## 📧 Contact
-
-For questions or suggestions, please open an issue on GitHub.
