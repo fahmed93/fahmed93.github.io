@@ -1,9 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './AIProjectsPage.css';
 
 const AIProjectsPage = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  
+  // Handle escape key to close modal
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && selectedProject) {
+        setSelectedProject(null);
+      }
+    };
+    
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [selectedProject]);
   
   const aiProjects = [
     {
@@ -221,6 +233,15 @@ const AIProjectsPage = () => {
               key={project.id}
               className="ai-project-card"
               onClick={() => setSelectedProject(project)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setSelectedProject(project);
+                }
+              }}
+              tabIndex={0}
+              role="button"
+              aria-label={`View details for ${project.title}`}
             >
               <div className="ai-project-card-header">
                 <div className="project-category-badge">{project.category}</div>
@@ -261,13 +282,25 @@ const AIProjectsPage = () => {
 
       {selectedProject && (
         <div className="ai-projects-modal-overlay" onClick={closeModal}>
-          <div className="ai-projects-modal" onClick={(e) => e.stopPropagation()}>
+          <div 
+            className="ai-projects-modal" 
+            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+          >
             <div className="ai-projects-modal-header">
               <div>
-                <h2>{selectedProject.title}</h2>
+                <h2 id="modal-title">{selectedProject.title}</h2>
                 <p className="modal-subtitle">{selectedProject.subtitle}</p>
               </div>
-              <button className="ai-projects-modal-close" onClick={closeModal}>×</button>
+              <button 
+                className="ai-projects-modal-close" 
+                onClick={closeModal}
+                aria-label="Close modal"
+              >
+                ×
+              </button>
             </div>
             
             <div className="ai-projects-modal-body">
@@ -279,8 +312,8 @@ const AIProjectsPage = () => {
               <div className="modal-section">
                 <h3>✨ Key Features</h3>
                 <ul className="features-list">
-                  {selectedProject.features.map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
+                  {selectedProject.features.map((feature) => (
+                    <li key={feature}>{feature}</li>
                   ))}
                 </ul>
               </div>
@@ -295,8 +328,8 @@ const AIProjectsPage = () => {
                   <div className="architecture-tier">
                     <strong>Specialized Agents:</strong>
                     <ul>
-                      {selectedProject.agentArchitecture.analyzers.map((analyzer, idx) => (
-                        <li key={idx}>{analyzer}</li>
+                      {selectedProject.agentArchitecture.analyzers.map((analyzer) => (
+                        <li key={analyzer}>{analyzer}</li>
                       ))}
                     </ul>
                   </div>
@@ -310,8 +343,8 @@ const AIProjectsPage = () => {
               <div className="modal-section">
                 <h3>🔄 Agent Workflow</h3>
                 <ol className="workflow-list">
-                  {selectedProject.workflow.map((step, idx) => (
-                    <li key={idx}>{step}</li>
+                  {selectedProject.workflow.map((step) => (
+                    <li key={step}>{step}</li>
                   ))}
                 </ol>
               </div>
