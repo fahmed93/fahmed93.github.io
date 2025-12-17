@@ -194,8 +194,6 @@
   line-height: 1.4;
   min-height: auto;
   display: block;
-  justify-content: initial;
-  align-items: initial;
 }
 
 .contact-status.success {
