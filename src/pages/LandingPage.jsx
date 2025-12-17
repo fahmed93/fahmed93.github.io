@@ -64,7 +64,7 @@ const LandingPage = () => {
             </div>
             <div className="design3-card-body">
               <code>sendMessage(email, message)</code>
-              <a href="#contact" className="design3-card-link">Execute →</a>
+              <Link to="/contact" className="design3-card-link">Execute →</Link>
             </div>
           </div>
         </div>
