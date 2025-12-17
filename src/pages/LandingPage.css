@@ -107,6 +107,31 @@
   box-shadow: 0 10px 30px rgba(88, 166, 255, 0.1);
 }
 
+.landingpage-card-highlight {
+  border: 2px solid #00ffaa;
+  background: linear-gradient(135deg, rgba(0, 255, 170, 0.05) 0%, rgba(0, 170, 255, 0.05) 100%);
+}
+
+.landingpage-card-highlight:hover {
+  border-color: #00ffaa;
+  box-shadow: 0 10px 40px rgba(0, 255, 170, 0.3);
+  transform: translateY(-8px);
+}
+
+.landingpage-card-highlight .landingpage-card-bullet {
+  color: #00ffaa;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
 .landingpage-card-header {
   background: #0d1117;
   padding: 1rem;

@@ -19,7 +19,7 @@ C#, Ruby, JavaScript, SQL, Dart
 React, REST APIs, GraphQL APIs
 
 ### AI & Automation
-GitHub Copilot, MCP Servers, Agentic AI
+GitHub Copilot, MCP Servers, Agentic AI, Multi-Agent Systems, LLM Integration
 
 ### DevOps & Tools
 Azure DevOps, AWS, Docker, CI/CD, Git, Jenkins, GitHub Actions
@@ -35,9 +35,11 @@ Agile/Scrum, Test-Driven Development, Microservices, System Design
 - Develop and maintain token generation, activation/redemption and inventory microservices processing 2M+ writes and 5M+ reads daily at 99.95% SLA.
 - Led zero-downtime migrations of legacy services to modern cloud-native architectures.
 - Directed partner authentication migration for 50+ customers, ensuring secure protocols and seamless continuity.
-- Won organization-wide hackathon with "PR Risk Analyzer" MCP server for automated risk evaluation of pull requests.
+- **Won organization-wide hackathon with "PR Risk Analyzer" MCP server** - multi-agent system for automated risk evaluation using orchestrator pattern with 4 specialized agents (complexity, security, history, performance).
+- **Architected agentic AI workflow** processing PR analysis through parallel agent execution, achieving 70% faster code review cycles and 85% prediction accuracy.
 - Redesigned CI/CD pipelines (Azure DevOps), improving deployment speed and reducing production incidents.
 - Conducted holiday stress testing, sustaining 900+ read RPS and 150+ write RPS with zero degradation.
+- **Implemented AI-powered predictive scaling** for microservices using machine learning models to forecast traffic patterns and auto-adjust resources.
 
 
 ### Software Engineer | Avant/Amount
