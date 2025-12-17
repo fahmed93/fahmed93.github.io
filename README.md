@@ -130,6 +130,11 @@ This site is configured to deploy to `https://fahmed93.github.io/` (root domain)
 **Manual Setup Required:**
 - See [GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md) for complete instructions on configuring GitHub Pages settings
 
+**SPA Routing on GitHub Pages:**
+- This project includes a Vite plugin that automatically creates a `404.html` file (copy of `index.html`) during build
+- This ensures that direct navigation to routes like `/resume` or `/portfolio` works correctly on GitHub Pages
+- When GitHub Pages encounters a 404, it serves the `404.html` file, which loads the React app and allows React Router to handle the routing
+
 **Local Build:**
 ```bash
 npm run build
