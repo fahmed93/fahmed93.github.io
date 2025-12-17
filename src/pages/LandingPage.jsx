@@ -44,7 +44,7 @@ const LandingPage = () => {
             </div>
             <div className="design3-card-body">
               <code>import projects from './portfolio'</code>
-              <a href="#projects" className="design3-card-link">View Code →</a>
+              <Link to="/portfolio" className="design3-card-link">View Code →</Link>
             </div>
           </div>
 
