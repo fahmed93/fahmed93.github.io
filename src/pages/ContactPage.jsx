@@ -83,8 +83,13 @@ const ContactPage = () => {
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
         // Fallback: Open default email client with pre-filled data
-        const mailtoLink = `mailto:fahmed93@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
-        window.location.href = mailtoLink;
+        const emailBody = `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`;
+        const mailtoLink = `mailto:fahmed93@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
+        
+        // Use anchor element for better cross-browser compatibility
+        const anchor = document.createElement('a');
+        anchor.href = mailtoLink;
+        anchor.click();
         
         setStatus({ 
           type: 'info', 
